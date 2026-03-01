@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EDGAR Filings Dashboard</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        margin: 0;
+        padding: 20px;
+    }
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+    .dashboard {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    input, button {
+        padding: 10px;
+        font-size: 1em;
+        margin: 5px;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    tr:hover {
+        background-color: #f9f9f9;
+    }
+</style>
+</head>
+<body>
+
+<div class="dashboard">
+    <h1>EDGAR Filings Dashboard</h1>
+    <p>Enter a CIK (Central Index Key) or ticker symbol:</p>
+    <input type="text" id="cikInput" placeholder="Example: 0000320193 (Apple)">
+    <button onclick="fetchFilings()">Fetch Filings</button>
+    
+    <div style="margin-top:10px;">
+        <button onclick="filterTable('All')">All</button>
+        <button onclick="filterTable('10-K')">10-K</button>
+        <button onclick="filterTable('10-Q')">10-Q</button>
+    </div>
+
+    <table id="filingsTable">
+        <thead>
+            <tr>
+                <th>Filing Date</th>
+                <th>Accession Number</th>
+                <th>Form Type</th>
+                <th>Document Link</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+<script>
+let allFilings = []; // Store all fetched filings
+
+async function fetchFilings() {
+    const cik = document.getElementById('cikInput').value.trim();
+    if (!cik) return alert("Please enter a CIK number.");
+
+    const url = `https://data.sec.gov/submissions/CIK${cik}.json`;
+
+    try {
+        const response = await fetch(url, {
+            headers: { "User-Agent": "EDGAR-Dashboard demo@example.com" }
+        });
+        const data = await response.json();
+        const filings = data.filings.recent;
+
+        // Filter 10-K and 10-Q filings
+        const relevantIndexes = filings.form.map((f, i) => (f === "10-K" || f === "10-Q") ? i : -1)
+                                           .filter(i => i !== -1);
+
+        allFilings = relevantIndexes.map(i => ({
+            formType: filings.form[i],
+            accessionNumber: filings.accessionNumber[i],
+            filingDate: filings.filingDate[i],
+            reportUrl: `https://www.sec.gov/Archives/edgar/data/${cik}/${filings.accessionNumber[i].replace(/-/g, "")}/${filings.primaryDocument[i]}`
+        }));
+
+        displayFilings(allFilings);
+    } catch (error) {
+        console.error("Error fetching filings:", error);
+        alert("Failed to fetch filings. Check CIK or try again later.");
+    }
+}
+
+function displayFilings(filings) {
+    const tbody = document.querySelector("#filingsTable tbody");
+    tbody.innerHTML = "";
+    filings.forEach(filing => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+            <td>${filing.filingDate}</td>
+            <td>${filing.accessionNumber}</td>
+            <td>${filing.formType}</td>
+            <td><a href="${filing.reportUrl}" target="_blank">View Document</a></td>
+        `;
+        tbody.appendChild(row);
+    });
+}
+
+function filterTable(type) {
+    if (type === "All") {
+        displayFilings(allFilings);
+    } else {
+        const filtered = allFilings.filter(f => f.formType === type);
+        displayFilings(filtered);
+    }
+}
+</script>
+
+</body>
+</html>
