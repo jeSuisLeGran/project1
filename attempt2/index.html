@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading Journal</title>
+    <link rel="stylesheet" href="./src/styles.css">
+</head>
+<body>
+
+<header>
+    <h1>My Trading Journal</h1>
+</header>
+
+<main class="journal-app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2>Current Date & Time</h2>
+        <p id="current-date"></p>
+        <p id="current-time"></p>
+    </aside>
+
+    <!-- Entry Form -->
+    <section class="journal-form">
+        <h2>Add Entry</h2>
+        <form id="entry-form">
+            <div class="form-group">
+                <label>Ticker</label>
+                <input type="text" id="ticker" required>
+            </div>
+
+            <div class="form-group">
+                <label>Entry Price</label>
+                <input type="number" id="entry" step="0.01" required>
+            </div>
+
+            <div class="form-group">
+                <label>Description</label>
+                <textarea id="description"></textarea>
+            </div>
+
+            <button type="submit">Add Entry</button>
+        </form>
+    </section>
+
+    <!-- Entries List -->
+    <section class="journal-entries">
+        <h2>Entries</h2>
+        <ul id="entries-list"></ul>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Trading Journal</p>
+</footer>
+
+<script src="./src/main.js" defer></script>
+<script src="./src/journal.js" defer></script>
+
+</body>
+</html>

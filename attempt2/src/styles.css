@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+}
+
+header {
+    background: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+main.journal-app {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+aside.sidebar,
+.journal-form,
+.journal-entries {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+aside.sidebar {
+    flex: 1;
+    min-width: 200px;
+}
+
+.journal-form {
+    flex: 2;
+    min-width: 280px;
+}
+
+.journal-entries {
+    flex: 2;
+    min-width: 280px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 8px 14px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+.journal-entries ul {
+    list-style: none;
+}
+
+.journal-entries li {
+    background: #f1f5f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.delete-btn {
+    background:   hsla(0, 8%, 25%, 0.364);
+
+    margin-top: 5px;
+}
+
+.delete-btn:hover {
+    background: hsla(0, 8%, 25%, 0.364);
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    background: #1f2937;
+    color: white;
+}
