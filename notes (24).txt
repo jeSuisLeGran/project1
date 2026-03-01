@@ -1,0 +1,168 @@
+<!Doctype html>
+<html>
+<meta>
+<head><title>Midnight Fire Capital</title></head>
+
+<body>
+<header>Midnight Fire Capital</header>
+<section class="nav">
+<nav>
+<a>Home</a><a>Learn</a><a>Tools</a><a>Contact</a><a>About Us</a>
+</section>
+<aside>LocalTime</aside>
+<div>
+<h2>News</h2>
+<ul>
+<!--inner_html-->
+</ul>
+<footer>Midnight Fire Capital TM</footer>
+<script>
+</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Midnight Fire Capital</title>
+</head>
+
+<body>
+
+<header>
+    <h1>Midnight Fire Capital Learn</h1>
+</header>
+
+<section class="nav">
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Learn</a>
+        <a href="#">Tools</a>
+        <a href="#">Contact</a>
+        <a href="#">About Us</a>
+    </nav>
+</section>
+
+<main>
+    <ul>
+
+        <!-- Corporate Finance -->
+        <li>
+            <a href="https://www.youtube.com/watch?v=5eGRi66iUfU">
+                Introduction to Corporate Finance: Course Video by Corporate Finance Institute
+            </a>
+            <p>
+                This video is great for a base understanding. The fundamental equation is the 
+                <strong>Cost of Capital</strong>, which leads to CAPM models.
+            </p>
+        </li>
+
+        <!-- Macroeconomics -->
+        <li>
+            <a href="https://www.youtube.com/watch?v=MKO1icFVtDc">
+                Macroeconomics - Everything You Need to Know by Jacob Clifford
+            </a>
+            <p>Get key buzzwords for macroeconomics.</p>
+        </li>
+
+        <!-- Microeconomics -->
+        <li>
+            <a href="https://www.youtube.com/watch?v=1UxA6JzoT-4">
+                Microeconomics - Everything You Need to Know by Jacob Clifford
+            </a>
+            <p>
+                Understand parameters and how they apply to utility functions.
+            </p>
+        </li>
+
+        <!-- Investments Textbook -->
+        <li>
+            <span style="color: blue;">
+                Essentials of Investments by Zvi Bodie, Alex Kane, and Alan J. Marcus
+            </span>
+            <p>
+                This textbook builds on Cost of Capital, refers to it as 
+                <strong>Discounted Cash Flow</strong>, formally presents CAPM, 
+                and introduces financial databases for analysis.
+            </p>
+
+            <p><strong>Supplements</strong></p>
+            <ul>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=WxKhiLQd9ro&list=PLcmt2ZfkV0M0wTQFHyIA3XGAaYbKsHlnG">
+                        Level I CFA Portfolio Management by IFT
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <!-- Financial Accounting -->
+        <li>
+            <a href="https://www.youtube.com/watch?v=v-djL7SPw4c">
+                Full Financial Accounting Course in One Video (10 Hours) by Tony Bell
+            </a>
+            <p>
+                Business has its own language. Understanding accounting keeps you fluent in it.
+            </p>
+
+            <p><strong>Supplements</strong></p>
+            <ul>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=Lz2VFRYBdm0">
+                        Full Management Accounting Course in One Video (10 Hours)
+                    </a>
+                </li>
+                <li style="color: blue;">
+                    The Taxes, Accounting, Bookkeeping Bible [3-in-1] by Martin J. Kallman
+                </li>
+            </ul>
+        </li>
+
+        <!-- Taxation -->
+        <li>
+            <a href="https://www.coursera.org/specializations/united-states-federal-taxation">
+                Coursera's: U.S. Federal Taxation Specialization
+            </a>
+            <p>A de facto structured approach to taxes.</p>
+
+            <p><strong>Supplements</strong></p>
+            <ul>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=f0BX7GIYAXs&list=PLc6cvQcs99iGpvwp9YQOkhU1_5QoeGrIX">
+                        Enrolled Agent Exam Preparation Course, Part 1 by EA Tax Training
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <!-- Business Law -->
+        <li>
+            <a href="https://www.youtube.com/watch?v=O8_7Fiu-OKI">
+                Business Law 101 by Harry Redinger
+            </a>
+            <p>Exposure to "Legal Requirements"</p>
+        </li>
+<!-- Capstone -->
+<li style="font-color:blue;">Master The Market: A Hedge Fund Manager's Guide to Proceess and Profit by Keith McCullough
+<p>Case Study to ease into more rigoruous studies</p>
+</li>
+<li style="font-color:blue;">Ratio Analysis
+<p>Start Bottom-up ideas</p>
+</li>
+<li style="color:blue;">THE CANDLESTICK TRADING BIBLE 3 in 1 by DELBERT CONLEY
+<p>Top Down Approach</p>
+<ul>
+<p><strong>Supplements</strong></p>
+<li style="color:blue;">SMART MONEY CONCEPT TRADING STRATEGY [PDF] by HowToTrade</li>
+<li style="color:blue;">ICT TRADING STRATEGY [PDF] by HowToTrade</li>
+</ul>
+<li><a href="https://studylib.net/doc/27068474/best-practices-for-equity-research-analysts-essentials-fo...">Best Practices for Equity Research Analysts: Essentials for Buy-Side and Sell-Side Analysts</a>
+<p style="color:black;">The practice</p>
+<li style="color:blue;"><!--distribution withheld-->The Art of Company Valuation and Financial Statement Analysis by Nicolas Schmidlin
+<p style="color:black;">The Finacial Metrics</p>
+</li>
+    </ul>
+</main>
+
+</body>
+</html>
